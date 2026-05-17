@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: IranSans;
+    src: url(../../public/fonts/IRANSansLight.woff);
+}
+
+@theme {
+    --font-IranSans: IranSans;
+    --breakpoint-xxl: 1365px;
+    --breakpoint-mmd: 880px;
+    --breakpoint-llg: 1150px;
+    --breakpoint-exs: 700px;
+    --breakpoint-3xl: 1550px;
+    --breakpoint-hs: 1600px;
+    --breakpoint-xs: 300px;
+    --breakpoint-zr: 1px;
+    --breakpoint-ps: 550px;
+    --breakpoint-vl: 500px;
+    --breakpoint-xxxs:140px;
+}
+
+.fixedImage {
+    right: calc(50% - 800px);
+}
+
+.fixedImageTower {
+    right: calc(50% - 197.5px);
+}
+
+.DisplayNone {
+    display: none;
+}
+
+.DisplayFlex {
+    display: flex;
+}
+
+.noScroll {
+    overflow-x: hidden;
+}
+
+.webkit {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
