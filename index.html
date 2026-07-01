@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/css/output.css">
+  <link rel="stylesheet" href="./src/css/input.css">
   <title>responsivegolestan</title>
 </head>
 
-<body class="overflow-x-hidden *:mx-auto bg-[#e9e9e9]">
+<body class="overflow-x-hidden *:mx-auto bg-[#e9e9e9] dark:bg-[#1e1e1e]">
   <div class="w-screen -z-10 bg-transparent relative bg-contain mx-auto inset-0 px-50">
     <img src="./public/images/cookingbackground.jpg" class="h-full w-screen fixed inset-0 hs:hidden object-cover
     top-0 z-0 bg-repeat-x" alt="">
@@ -32,61 +32,203 @@
             id="a" />
         </svg>
       </button>
-      <div class="w-full absolute -translate-y-150 -z-10 overflow-hidden transition-all duration-700 ease-in-out"
-        id="navBar">
-        <div class="w-full text-sm bg-[#2d2d2d] py-4 pr-2 leading-10">
-          <ul class="*:hover:text-white *:cursor-pointer *:transition-all *:duration-300 pr-5">
-            <li>صفحه اصلی</li>
-            <li>شرکت گلستان</li>
-            <li>محصولات</li>
-            <li>وبلاگ</li>
-            <li>قرعه کشی</li>
-            <li>استخدام</li>
-            <li>تماس با ما</li>
-            <li>EN</li>
+      <div class="w-full md:hidden absolute -z-10 h-0 overflow-hidden transition-all duration-500 
+            ease-in-out" id="navBar">
+        <div class="w-full text-sm bg-[#2d2d2d] py-4 pr-2 overflow-y-auto max-h-[80vh]
+                leading-10 transition-all duration-100 ease-in-out">
+          <ul class="*:cursor-pointer *:transition-all *:duration-300 pr-5 transition-all duration-800 
+                    ease-in-out py-3">
+            <li class="hover:text-white">
+              <a href="./index.html">صفحه اصلی</a>
+            </li>
+            <li class="hover:text-white flex items-center gap-2" id="expandCompany">
+              شرکت گلستان
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </li>
+            <div id="expandCompanyDetails" class="flex flex-col overflow-hidden max-h-0 pr-2
+                        transition-all ease-in-out duration-500 *:hover:text-white *:transition-all
+                        *:duration-300">
+              <span>
+                <a href="./intro.html">معرفی شرکت</a>
+              </span>
+              <span>تاریخچه گلستان</span>
+              <span>اخبار و اطلاعیه ها</span>
+              <span>مسئولیت های اجتماعی</span>
+              <span>سازمان فروش</span>
+              <span>سازمان توزیع</span>
+              <span>برندها</span>
+            </div>
+            <li id="expandProducts" class="hover:text-white flex items-center gap-2">
+              محصولات
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </li>
+            <div id="expandProductsDetails" class="flex flex-col overflow-hidden max-h-0 pr-2
+                        transition-all ease-in-out duration-500 *:hover:text-white *:transition-all
+                        *:duration-300">
+              <span>چای</span>
+              <span>ناتس</span>
+              <span>ادویه و چاشنی</span>
+              <span>برنج</span>
+              <span>زعفران و زرشک</span>
+              <span>دمنوش</span>
+              <span>حبوبات و غلات</span>
+              <span>عصاره و شربت گیاهی</span>
+              <span>قند و شکر</span>
+              <span>هاتی نودل</span>
+              <span>سایر محصولات</span>
+              <span>گل کیس</span>
+            </div>
+            <li id="expandWeb" class="hover:text-white flex items-center gap-2">
+              وبلاگ
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </li>
+            <div id="expandWebDetails" class="flex flex-col overflow-hidden max-h-0 pr-2
+                        transition-all ease-in-out duration-500 *:hover:text-white *:transition-all
+                        *:duration-300">
+              <span>مجله گلستان</span>
+            </div>
+            <li id="expand" class="hover:text-white">قرعه کشی</li>
+            <li id="expand" class="hover:text-white">استخدام</li>
+            <li id="expandContact" class="hover:text-white flex items-center gap-2">
+              تماس با ما
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </li>
+            <div id="expandContactDetails" class="flex flex-col overflow-hidden max-h-0 pr-2
+                        transition-all ease-in-out duration-500 *:hover:text-white *:transition-all
+                        *:duration-300">
+              <span>دفتر مرکزی</span>
+              <span>صدای مصرف کنندگان</span>
+              <span>ارتباط با مشترکین</span>
+            </div>
+            <li id="expand" class="hover:text-white">EN</li>
           </ul>
         </div>
       </div>
       <div class="hidden md:block xl:pr-20 xxl:mx-auto">
-        <ul class="flex *:text-[16px] *:font-IranSans *:pt-5 *:text-[#afb2b4] justify-center *:hover:text-white
-      xxl:-translate-y-5 *:transition-all *:duration-500">
-          <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">صفحه اصلی</a>
+        <ul class="flex *:text-[16px] *:font-IranSans *:pt-5 *:text-[#afb2b4] justify-center
+        xxl:-translate-y-5 *:cursor-pointer">
+          <li class="hover:text-white transition-all duration-300">
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4]" href="">صفحه اصلی</a>
+          </li>
+          <li class="relative group">
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4] hover:text-white flex
+                        items-center gap-2 transition-all duration-300" href="">
+              شرکت گلستان
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </a>
+            <div class="absolute z-50 top-full opacity-0 flex-col pr-4 llg:pr-6 text-right
+                        bg-[#333333] justify-center w-50 px-5 gap-y-5 flex py-4 group-hover:opacity-100
+                        *:hover:text-white transition-all ease-in-out duration-300 *:transition-all
+                        *:duration-300 pointer-events-none group-hover:pointer-events-auto">
+              <a href="./intro.html">معرفی شرکت</a>
+              <a href="">تاریخچه گلستان</a>
+              <a href="">اخبار و اطلاعیه ها</a>
+              <a href="">مسئولیت های اجتماعی</a>
+              <a href="">سازمان فروش</a>
+              <a href="">سازمان توزیع</a>
+              <a href="">برندها</a>
+            </div>
+          </li>
+          <li class="relative group">
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4] flex items-center
+                        gap-2 hover:text-white transition-all duration-300" href="">
+              محصولات
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </a>
+            <div class="absolute z-50 top-full opacity-0 flex-col pr-4 llg:pr-6 text-right
+                        bg-[#333333] justify-center w-50 px-5 gap-y-5 flex py-4 group-hover:opacity-100
+                        *:hover:text-white transition-all ease-in-out duration-300 *:transition-all
+                        *:duration-300 pointer-events-none group-hover:pointer-events-auto">
+              <a href="">چای</a>
+              <a href="">ناتس</a>
+              <a href="">ادویه و چاشنی</a>
+              <a href="">برنج</a>
+              <a href="">زعفران و زرشک</a>
+              <a href="">دمنوش</a>
+              <a href="">حبوبات و غلات</a>
+              <a href="">عصاره و شربت گیاهی</a>
+              <a href="">قند و شکر</a>
+              <a href="">هاتی نودل</a>
+              <a href="">سایر محصولات</a>
+              <a href="">گل کیس</a>
+            </div>
+          </li>
+          <li class="relative group">
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4] flex items-center
+                        gap-2 hover:text-white transition-all duration-300" href="">
+              وبلاگ
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </a>
+            <div class="absolute z-50 top-full opacity-0 flex-col pr-4 llg:pr-6 text-right
+                        bg-[#333333] justify-center w-50 px-5 gap-y-5 flex py-4 group-hover:opacity-100
+                        *:hover:text-white transition-all ease-in-out duration-300 *:transition-all
+                        *:duration-300 pointer-events-none group-hover:pointer-events-auto">
+              <a href="">مجله گلستان</a>
+            </div>
           </li>
           <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">شرکت گلستان</a>
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4]
+                        hover:text-white transition-all duration-300" href="">قرعه کشی</a>
           </li>
           <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">محصولات</a>
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4]
+                        hover:text-white transition-all duration-300" href="">استخدام</a>
+          </li>
+          <li class="relative group">
+            <a class="border-l px-2 llg:px-4 border-[#afb2b4] flex items-center
+                        gap-2 hover:text-white transition-all duration-300" href="">
+              تماس با ما
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="size-4">
+                <path d="M12 16.5L5.5 10h13L12 16.5z" />
+              </svg>
+            </a>
+            <div class="absolute z-50 top-full opacity-0 flex-col pr-4 llg:pr-6 text-right
+                        bg-[#333333] justify-center w-50 px-5 gap-y-5 flex py-4 group-hover:opacity-100
+                        *:hover:text-white transition-all ease-in-out duration-300 *:transition-all
+                        *:duration-300 pointer-events-none group-hover:pointer-events-auto">
+              <a href="">دفتر مرکزی</a>
+              <a href="">صدای مصرف کنندگان</a>
+              <a href="">ارتباط با مشترکین</a>
+            </div>
           </li>
           <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">وبلاگ</a>
-          </li>
-          <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">قرعه کشی</a>
-          </li>
-          <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">استخدام</a>
-          </li>
-          <li>
-            <a class="border-l px-4 llg:px-6 border-[#afb2b4]" href="">تماس با ما</a>
-          </li>
-          <li>
-            <a class="px-4" href="">EN</a>
+            <a class="px-2" href="">EN</a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="w-screen max-w-400 mx-auto p-10 bg-[#f2f2f2]">
+    <div class="w-screen max-w-400 mx-auto p-10 bg-[#f2f2f2] dark:bg-[#404040]">
       <div class="md:flex md:justify-center lg:w-250 mx-auto">
         <div class="*:font-IranSans lg:pl-40 lg:pt-10">
           <h2 class="text-[#ff0000] text-3xl">
             قرعه‌کشی مصرف‌کنندگان گلستان
           </h2>
-          <h3 class="text-[#58595b] text-xl mt-5">
+          <h3 class="text-[#58595b] dark:text-slate-300 text-xl mt-5">
             قرعه‌کشی دوره‌ای مصرف‌کنندگان چای گلستان
           </h3>
-          <p class="text-[#898989] text-sm lg:text-[16px] leading-8 mt-5 md:pl-10 mmd:ml-10 ">
+          <p class="text-[#898989] dark:text-[#d4d4d4] text-sm lg:text-[16px] leading-8 mt-5 md:pl-10 mmd:ml-10 ">
             هر یک از مصرف‌کنندگان محصولات چای و چای کیسه‌ای گلستان می‌توانند با ارسال کد قرعه‌کشی روی بسته به شماره
             30007405 در قرعه کشی‌های دوره‌ای گلستان شرکت کنند.
             نگهداری از بسته‌بندی محصول برای اهدای جایزه الزامی است.
@@ -99,14 +241,14 @@
       object-cover self-center" alt="">
       </div>
     </div>
-    <div class="bg-white w-screen max-w-400 mx-auto">
-      <div class=" bg-white pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
-        <div class="w-[95%] h-px mx-auto bg-slate-400"></div>
+    <div class="bg-white w-screen max-w-400 mx-auto dark:bg-[#404040]">
+      <div class=" bg-white dark:bg-[#404040] pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
+        <div class="w-[95%] h-px mx-auto bg-slate-400 dark:bg-slate-100"></div>
       </div>
-      <div class="bg-white pb-10 leading-10 font-IranSans">
+      <div class="bg-white dark:bg-[#404040] pb-10 leading-10 font-IranSans">
         <div class="pr-4 md:px-10 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
           <h2 class="text-lg md:text-xl text-[#ff0000] pt-20 md:pt-0 md:mt-20 font-bold">معرفی گلستان</h2>
-          <h2 class="text-[15px] md:text-[16px] mt-5 text-[#7a7a7a] text-justify pl-10">
+          <h2 class="text-[15px] md:text-[16px] mt-5 text-[#7a7a7a] dark:text-[#d4d4d4] text-justify pl-10">
             آنچه که امروز با نام مجموعه
             <span class="text-[#ff0000]">گلستان</span>
             می‌شناسیم در سال 1329 بنیان نهاده شد. زمانی که شرکت گلستان فعالیت خود را با بسته‌بندی و توزیع چای پاکتی
@@ -121,7 +263,7 @@
           </h2>
         </div>
         <div class="pr-4 md:px-10 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
-          <h2 class="text-[15px] mt-8 md:text-[16px] text-[#7a7a7a] pl-10 text-justify">
+          <h2 class="text-[15px] mt-8 md:text-[16px] text-[#7a7a7a] pl-10 text-justify dark:text-[#d4d4d4]">
             هدفمندی و برنامه‌ریزی موثر، ایمان و عزم راسخ برای دستیابی به اهداف تعیین شده، به کار گیری همکاران مجرب و
             دلسوز،
             استفاده از روش های نوین بازاریابی و مشتری محوری از جمله عوامل مهم در استراتژی
@@ -131,7 +273,7 @@
         </div>
         <div class="pr-4 md:px-10 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
           <h2 class="text-lg text-[#ff0000] font-bold mt-20 md:text-xl">محصولات گلستان​</h2>
-          <p class="text-[15px] mt-5 text-[#7a7a7a] text-justify pl-12 md:text-[16px]">
+          <p class="text-[15px] mt-5 text-[#7a7a7a] text-justify pl-12 md:text-[16px] dark:text-[#d4d4d4]">
             <span class="text-[#ff0000]">نام تجاری گلستان</span>
             قدمتی به اندازه عمر شرکت گلستان دارد. گلستان ممتازترین محصولات خود را با این نام تجاری عرضه می‌کند.
             مصرف‌کنندگان
@@ -145,25 +287,29 @@
         class="scale-0 md:scale-100 hidden exs:flex transition-all pt-30 duration-700 justify-center gap-x-5 max-w-270 px-5 mx-auto pl-10 font-IranSans md:mb-50">
         <div>
           <img src="./public/images/humanSource.png" alt="" srcset="">
-          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50">سرمایه انسانی
+          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50
+          dark:text-[#d4d4d4] dark:border-b-slate-300">سرمایه انسانی
           </div>
         </div>
         <div>
           <img src="./public/images/salesCenters.png" alt="" srcset="">
-          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50">مراکز فروش</div>
+          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50
+          dark:text-[#d4d4d4] dark:border-b-slate-300">مراکز فروش</div>
         </div>
         <div>
           <img src="./public/images/golestanProducts.png" alt="" srcset="">
-          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50">محصولات گلستان
+          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50
+          dark:text-[#d4d4d4] dark:border-b-slate-300">محصولات گلستان
           </div>
         </div>
         <div>
           <img src="./public/images/golestanCustomers.png" alt="" srcset="">
-          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50">مشتریان گلستان
+          <div class="text-[#7c7d7e] text-[16px] text-center w-full py-5 border-b border-[#7c7d7e]/50
+          dark:text-[#d4d4d4] dark:border-b-slate-300">مشتریان گلستان
           </div>
         </div>
       </div>
-      <div class="bg-white h-4 pb-4 pl-6 md:pl-10 lg:pl-0">
+      <div class="bg-white dark:bg-[#404040] h-4 pb-4 pl-6 md:pl-10 lg:pl-0">
         <div class="w-[95%] h-px bg-slate-300 mx-auto"></div>
       </div>
     </div>
@@ -177,13 +323,13 @@
         </div>
       </div>
     </div>
-    <div class="w-screen max-w-400 bg-white font-IranSans">
-      <div class=" bg-white pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
-        <div class="w-[95%] h-px mx-auto bg-slate-400/50"></div>
+    <div class="w-screen max-w-400 bg-white font-IranSans dark:bg-[#404040]">
+      <div class=" bg-white dark:bg-[#404040] pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
+        <div class="w-[95%] h-px mx-auto bg-slate-400/50 dark:bg-slate-100"></div>
       </div>
       <div class="py-30 leading-10 text-justify pr-4 pl-10 md:px-20 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
         <h2 class="text-xl text-[#ff0000] font-bold">رکن اول غذای ایرانی</h2>
-        <p class="text-[16px] text-[#818588] mt-5">مرغوب‌ترین برنج دنیا، برنج ایران است و بهترین نوع برنج ایرانی،‌
+        <p class="text-[16px] text-[#818588] dark:text-[#d4d4d4] mt-5">مرغوب‌ترین برنج دنیا، برنج ایران است و بهترین نوع برنج ایرانی،‌
           طارم
           و هاشمی. این برنج‌ها از بهترین
           شالیزارهای مازندران برداشت شده، پس از كنترل كیفیت در آزمایشگاه‌های تخصصی گلستان وارد چرخه بسته‌بندی و در
@@ -210,20 +356,20 @@
         </div>
       </div>
     </div>
-    <div class="w-screen max-w-400 bg-white font-IranSans">
-      <div class=" bg-white pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
-        <div class="w-[95%] h-px mx-auto bg-slate-400/50"></div>
+    <div class="w-screen max-w-400 bg-white font-IranSans dark:bg-[#404040]">
+      <div class=" bg-white dark:bg-[#404040] pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
+        <div class="w-[95%] h-px mx-auto bg-slate-400/50 dark:bg-slate-100"></div>
       </div>
       <div class="py-30 leading-10 text-justify pr-4 pl-10 md:px-20 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
         <h2 class="text-xl text-[#ff0000] font-bold">سابقه‌ای به قدمت یک عمر</h2>
-        <p class="text-[16px] mt-5 text-[#818588]">چای تنها یك نوشیدنی گرم نیست.‌ یک گفتمان است؛‌ گرمابخش وجود و
+        <p class="text-[16px] mt-5 text-[#818588] dark:text-[#d4d4d4]">چای تنها یك نوشیدنی گرم نیست.‌ یک گفتمان است؛‌ گرمابخش وجود و
           بهانه‌ای برای آغاز
           یك
           معاشرت دل‌چسب. بی‌دلیل
           نیست كه نام «محبوب‌ترین نوشیدنی دنیا» را با خود یدک می‌كشد. نوشیدنش خستگی‌ها را فراری داده،‌ حس خوب آرامش را
           به همراه دارد.
         </p>
-        <p class="text-[16px] mt-10 text-[#818588]">
+        <p class="text-[16px] mt-10 text-[#818588] dark:text-[#d4d4d4]">
           برای مردمان ایران زمین نام
           <span class="text-[#ff0000] font-bold">گلستان </span>
           با چای پیوند خورده است؛‌ قدیمی‌ترین محصول مجموعه گلستان،‌ با مدرن‌ترین و بهداشتی‌ترین دستگاه‌های روز دنیا
@@ -247,17 +393,17 @@
         </div>
       </div>
     </div>
-    <div class="w-screen max-w-400 bg-white font-IranSans">
-      <div class=" bg-white pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
-        <div class="w-[95%] h-px mx-auto bg-slate-400/50"></div>
+    <div class="w-screen max-w-400 bg-white dark:bg-[#404040] font-IranSans">
+      <div class=" bg-white dark:bg-[#404040] pt-4 h-4 w-full md:pl-5 lg:pl-0 hidden md:block">
+        <div class="w-[95%] h-px mx-auto bg-slate-400/50 dark:bg-slate-100"></div>
       </div>
       <div class="py-30 leading-10 text-justify pr-4 pl-10 md:px-20 mmd:px-20 lg:px-50 xl:px-80 2xl:px-110">
         <h2 class="text-xl text-[#ff0000] font-bold">آجيل‌های خوش خنده</h2>
-        <p class="text-[16px] mt-5 text-[#818588]">
+        <p class="text-[16px] mt-5 text-[#818588] dark:text-[#d4d4d4]">
           خواص فوق‌العاده پسته بر كسی پوشیده نیست. پسته را منبع ویتامین و مواد معدنی می‌نامند، یك پمپ خون‌ساز قوی و
           تسكین دهنده قلب و اعصاب.
         </p>
-        <p class="text-[16px] mt-10 text-[#818588]">
+        <p class="text-[16px] mt-10 text-[#818588] dark:text-[#d4d4d4]">
           <span class="text-[#ff0000] font-bold">پسته گلستان</span>
           اما حسابش از دیگر پسته‌های بازار جداست. مرغوب‌ترین پسته خام از بهترین باغ‌های پسته ایران دستچین می‌شود.‌ پس
           از
@@ -270,18 +416,18 @@
           transition-all duration-500 cursor-pointer">ناتس گلستان</button>
       </div>
     </div>
-    <div class="w-full py-15 mt-62.5 bg-white pr-8 md:pr-12 lg:pr-16">
+    <div class="w-full py-15 mt-62.5 bg-white dark:bg-[#404040] pr-8 md:pr-12 lg:pr-16">
       <div class="text-xl text-[#ff0000] font-IranSans font-bold">مجله گلستان</div>
     </div>
     <div
-      class="bg-[#cde4b0] w-screen max-w-400 *:w-fit *:mx-auto py-10 font-IranSans
+      class="bg-[#cde4b0] dark:bg-[#708d47] w-screen max-w-400 *:w-fit *:mx-auto py-10 font-IranSans
     xs:px-20 ps:px-30 zr:px-5 sm:px-40 grid grid-cols-1 md:grid-cols-2 md:gap-x-5 lg:grid-cols-3 max-lg:gap-y-10 lg:px-30">
-      <div class="shadow-xl bg-white flex flex-col">
+      <div class="shadow-xl bg-white dark:bg-[#595959] flex flex-col">
         <img src="./public/images/Mag-snack.jpg" class="hover:brightness-120 cursor-pointer" alt="" srcset="">
         <div class="px-6.5 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer">چیلاکیله</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               احتمالا نام چیلا کیله را نشنیده باشید ولی اگر یکبار این غذای فوق‌العاده خوشمزه را تهیه کنید و نوش جان
               کنید جزئی جدانشدنی از فهرست
             </p>
@@ -291,12 +437,12 @@
               transition-all duration-500 cursor-pointer">ادامه مطلب</button>
         </div>
       </div>
-      <div class="shadow-xl bg-white flex flex-col">
+      <div class="shadow-xl bg-white dark:bg-[#595959] flex flex-col">
         <img src="./public/images/Mag-fish.jpg" class="hover:brightness-120 cursor-pointer" alt="" srcset="">
         <div class="px-6.5 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer">چیلاکیله</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               احتمالا نام چیلا کیله را نشنیده باشید ولی اگر یکبار این غذای فوق‌العاده خوشمزه را تهیه کنید و نوش جان
               کنید جزئی جدانشدنی از فهرست
             </p>
@@ -306,12 +452,12 @@
               transition-all duration-500 cursor-pointer">ادامه مطلب</button>
         </div>
       </div>
-      <div class="shadow-xl bg-white flex-col hidden lg:flex">
+      <div class="shadow-xl bg-white dark:bg-[#595959] flex-col hidden lg:flex">
         <img src="./public/images/Mag-spaghetti.jpg" class="hover:brightness-120 cursor-pointer" alt="" srcset="">
         <div class="px-6.5 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer">چیلاکیله</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               احتمالا نام چیلا کیله را نشنیده باشید ولی اگر یکبار این غذای فوق‌العاده خوشمزه را تهیه کنید و نوش جان
               کنید جزئی جدانشدنی از فهرست
             </p>
@@ -323,15 +469,15 @@
       </div>
     </div>
     <div
-      class="bg-[#ffffff] w-screen max-w-400 *:w-fit *:mx-auto py-10 font-IranSans
+      class="bg-[#ffffff] dark:bg-[#404040] w-screen max-w-400 *:w-fit *:mx-auto py-10 font-IranSans
     xs:px-20 ps:px-30 zr:px-5 sm:px-40 grid grid-cols-1 md:grid-cols-2 md:gap-x-5 lg:grid-cols-3 max-lg:gap-y-10 lg:px-30">
-      <div class="bg-white flex flex-col border border-slate-200 shadow-lg">
+      <div class="bg-white dark:bg-[#595959] flex flex-col border border-slate-200 shadow-lg">
         <iframe src="https://www.aparat.com/video/video/embed/videohash/cQ0yF/vt/frame" class="w-full h-43"
           frameborder="0"></iframe>
         <div class="px-10 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer font-bold">برنج گلستان</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               اعطر و طعم بی‌نظیر برنج گلستان با هیچ برنج دیگری قابل مقایسه نیست. با گلستان،‌ كیفیت زندگی بالاتر از
               همیشه است. چرا كه مشتریان گلستان؛‌ لایق بهترین ها هستند.
             </p>
@@ -341,13 +487,13 @@
               transition-all duration-500 cursor-pointer">ویدیوهای بیشتر</button>
         </div>
       </div>
-      <div class="bg-white flex flex-col border border-slate-200 shadow-lg">
+      <div class="bg-white dark:bg-[#595959] flex flex-col border border-slate-200 shadow-lg">
         <iframe src="https://www.aparat.com/video/video/embed/videohash/Ysaot/vt/frame" class="w-full h-43"
           frameborder="0"></iframe>
         <div class="px-10 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer font-bold">اینستاگرام هاتی نودل</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               نودل‌های هاتی كارا را می‌توان جایگزین سالمی برای غذاهای فست‌فودی دانست. طعم عالی،‌ ارزش غذایی بالا و
               قیمت مناسب از این محصول غذای سالم و كاملی ساخته است.
           </div>
@@ -356,13 +502,13 @@
               transition-all duration-500 cursor-pointer">ادامه مطلب</button>
         </div>
       </div>
-      <div class="bg-white flex-col hidden lg:flex border border-slate-200 shadow-lg">
+      <div class="bg-white dark:bg-[#595959] flex-col hidden lg:flex border border-slate-200 shadow-lg">
         <iframe src="https://www.aparat.com/video/video/embed/videohash/Mwp4H/vt/frame" class="w-full h-43"
           frameborder="0"></iframe>
         <div class="px-10 *:w-fit">
           <h3 class="text-xl text-[#ff0000] mt-8 cursor-pointer font-bold">سالاد نودل</h3>
           <div class="w-full mt-8">
-            <p class="text-sm text-[#7c7d7e] leading-8 text-justify webkit">
+            <p class="text-sm text-[#7c7d7e] dark:text-[#d4d4d4] leading-8 text-justify webkit">
               نودل هاتی کارا یك میان‌وعده‌ی مغذی، در هر موقعیتی كه باشید با كمی آب جوش و یك نودل هاتی‌كارا می‌توانید
               از یك غذای سالم و خوشمزه لذت ببرید.
             </p>
@@ -387,13 +533,13 @@
         z-10" alt="">
     </div>
     <div class="w-full h-5 bg-[#e9d69f]"></div>
-    <div class="w-screen max-w-400 bg-white font-IranSans">
-      <div class=" bg-white pt-4 h-4 w-full md:pl-5 lg:pl-0">
-        <div class="w-[95%] h-px mx-auto bg-slate-400/50"></div>
+    <div class="w-screen max-w-400 bg-white dark:bg-[#404040] font-IranSans">
+      <div class=" bg-white dark:bg-[#404040] pt-4 h-4 w-full md:pl-5 lg:pl-0">
+        <div class="w-[95%] h-px mx-auto bg-slate-400/50 dark:bg-slate-100"></div>
       </div>
       <div class="py-30 leading-10 text-justify pr-4 pl-10 md:px-20 mmd:px-20 lg:px-75">
         <h2 class="text-lg md:text-xl text-[#ff0000] font-bold mt-5">مسئوليت‌های اجتماعی گلستان</h2>
-        <p class="text-[15px] md:text-[16px] mt-5 text-[#818588]">
+        <p class="text-[15px] md:text-[16px] mt-5 text-[#818588] dark:text-[#d4d4d4]">
           كسب‌وكارها اجزای قدرتمند جامعه به شمار می‌آیند و موفق‌ترین، قابل‌احترام‌ترین و مطلوب‌ترین كسب‌وكارها آنهایی
           هستند كه كاری فراتر از درآمدزایی ایجاد كنند؛‌ آنهایی كه آمده‌اند تا از تجربه و امکاناتشان برای حل مشكلات جامعه
           و محیط زندگی خود استفاده كنند.
@@ -405,7 +551,7 @@
         transition-all duration-500 cursor-pointer">اطلاعات بیشتر</button>
       </div>
     </div>
-    <div class="w-screen max-w-400 bg-[#eeefef] py-6 px-62.5">
+    <div class="w-screen max-w-400 bg-[#eeefef] dark:bg-[#2f2f2f] py-6 px-62.5">
       <div class="w-full h-full flex justify-center items-center gap-x-2
         *:block *:w-13.75 *:h-13.75 **:transition-all **:duration-200">
         <a href="">
@@ -608,7 +754,7 @@
       </div>
     </div>
   </div>
-  <button id="scrollToTop" class="fixed bg-black opacity-0 hover:opacity-100
+  <button id="scrollToTop" class="fixed bg-black opacity-0 hover:opacity-80
   p-3 bottom-5 left-5 z-50 transition-all duration-200 rounded-xs cursor-pointer">
     <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 1.04 1.04"
       enable-background="new 0 0 52 52" xml:space="preserve">
@@ -616,7 +762,27 @@
         d="M0.828 0.42c0.016 -0.016 0.016 -0.038 0 -0.054l-0.3 -0.294c-0.016 -0.016 -0.04 -0.016 -0.056 0l-0.3 0.294c-0.016 0.016 -0.016 0.038 0 0.054l0.056 0.054c0.016 0.016 0.04 0.016 0.056 0l0.094 -0.092c0.016 -0.016 0.044 -0.004 0.044 0.018v0.54c0 0.02 0.018 0.04 0.04 0.04h0.08c0.022 0 0.04 -0.022 0.04 -0.04V0.4c0 -0.024 0.028 -0.034 0.044 -0.018l0.094 0.092c0.016 0.016 0.04 0.016 0.056 0z" />
     </svg>
   </button>
-  <script src="./src/js/scrollToTop"></script>
+  <button id="themeToggle" class="p-2 rounded-full bg-black dark:bg-white transition
+  fixed right-5 bottom-5 flex items-center ">
+
+    <!-- sun -->
+    <span id="sun">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-white" width="20" height="20">
+        <path
+          d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1Zm18 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1ZM5.64 5.64a1 1 0 0 1 1.41 0l.7.7a1 1 0 1 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41Zm11.31 11.31a1 1 0 0 1 1.41 0l.7.7a1 1 0 0 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41ZM18.36 5.64a1 1 0 0 1 0 1.41l-.7.7a1 1 0 1 1-1.41-1.41l.7-.7a1 1 0 0 1 1.41 0ZM6.34 17.66a1 1 0 0 1 0 1.41l-.7.7a1 1 0 1 1-1.41-1.41l.7-.7a1 1 0 0 1 1.41 0Z" />
+      </svg>
+    </span>
+
+    <!-- moon -->
+    <span id="moon" class="hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="fill-black">
+        <path d="M21.64 13.65A9 9 0 1 1 10.35 2.36a7 7 0 1 0 11.29 11.29Z" />
+      </svg>
+    </span>
+  </button>
+  <script src="./src/js/darkmode.js"></script>
+  <script src="./src/js/scrollToTop.js"></script>
+  <script src="./src/js/navbar.js"></script>
 </body>
 
 </html>
